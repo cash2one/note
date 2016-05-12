@@ -138,7 +138,8 @@ local obj3 = Driver:new({msg = "obj3 base is driver"})
 obj3:initCount()  
 obj3:print()
 --dump(obj3)
---dump(obj3:getSelf())
+--dump(obj3:getSelf())  --子类的self
+--dump(obj3.super:getSelf())  --父类的self
 print(string.format("obj3: str = '%s' , num = '%d' , msg = '%s'",obj3.str, obj3.num, obj3.msg))  
 
 --从obj1创建对象 

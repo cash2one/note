@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><root>	<task_root name="task">		<item name="item"/>	</task_root>	<task_root2 name="task">		<item name="item"/>	</task_root2>	<task_root3 name="task">		<item name="item"/>		<item name="item"/>	</task_root3>	<role>		<bag1>			<grid name="grid"/>		</bag1>		<bag2>			<grid name="grid"/>		</bag2>	</role></root>

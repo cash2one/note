@@ -1,0 +1,28 @@
+<dragonBones name="xinxin" frameRate="30" version="2.3">
+ <armature name="roott">
+  <bone name="2">
+   <transform x="0" y="0" skX="0" skY="0" scX="2.75" scY="2.75"/>
+  </bone>
+  <skin name="">
+   <slot name="2" parent="2" z="0">
+    <display name="w3" type="image">
+     <transform x="0" y="0" skX="0" skY="0" scX="1" scY="1" pX="29" pY="29"/>
+    </display>
+   </slot>
+  </skin>
+  <animation name="IDLE1" fadeInTime="0" duration="9" scale="1" loop="1" tweenEasing="NaN">
+   <timeline name="2" scale="1" offset="0">
+    <frame z="0" tweenEasing="0" duration="5">
+     <transform x="0" y="0" skX="0" skY="0" scX="2.75" scY="2.75" pX="0" pY="0"/>
+     <colorTransform aO="0" rO="0" gO="0" bO="0" aM="60" rM="100" gM="100" bM="100"/>
+    </frame>
+    <frame z="0" tweenEasing="0" duration="3">
+     <transform x="0" y="0" skX="0" skY="0" scX="0.8" scY="0.8" pX="0" pY="0"/>
+    </frame>
+    <frame z="0" tweenEasing="0" duration="1">
+     <transform x="0" y="0" skX="0" skY="0" scX="1" scY="1" pX="0" pY="0"/>
+    </frame>
+   </timeline>
+  </animation>
+ </armature>
+</dragonBones>
