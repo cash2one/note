@@ -101,8 +101,9 @@ int cpp_sendTest(lua_State* L)
 	lua_pushstring(L, "Himi");
 
 	//传递自定义函数
-	//MyClass *o = (MyClass *)tolua_tousertype(L, 1, NULL);
-	//if (o) tolua_pushusertype(L, Mtolua_new((CCSize)(o->getSize())), "CCSize");
+	//MyClass *o = (MyClass *)tolua_tousertype(L, 1, NULL); --未测试
+	//if (o) tolua_pushusertype(L, Mtolua_new((CCSize)(o->getSize())), "CCSize"); --未测试
+	//tolua_pushusertype(L, scene, "cc.Scene");  --测试成功
 	//return 1;
 	
 	//返给Lua值个数
