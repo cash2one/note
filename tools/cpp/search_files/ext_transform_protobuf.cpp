@@ -33,6 +33,7 @@ bool dealFile(string path, string file, FILE *fout)
 				sscanf(str, "%s %s", msgHead, msgName);
 				if (strcmp(msgHead, "message") == 0)
 				{
+					//[协议体名称] = "文件名"
 					string msgBody = "[\"" + string(msgName) + "\"]";
 					fprintf(fout, "%-40s = \"%s\", \n", msgBody.c_str(), file.c_str());
 				}
