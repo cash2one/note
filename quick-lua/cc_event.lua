@@ -14,10 +14,10 @@ btnPlay:addTouchEventListener(function (target, evt)
     -- btnPlay本身
 
     -- evt的值是
-    -- ccui.TouchEventType.began
-    -- ccui.TouchEventType.moved
-    -- ccui.TouchEventType.ended
-    -- ccui.TouchEventType.canceled
+    -- ccui.TouchEventType.began 0
+    -- ccui.TouchEventType.moved 1
+    -- ccui.TouchEventType.ended 2
+    -- ccui.TouchEventType.canceled 3
 
     if evt == ccui.TouchEventType.began then 
         print('began')

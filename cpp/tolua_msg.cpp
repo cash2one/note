@@ -51,16 +51,22 @@ lua_newtable(L);
 // index
 for (int i = 1; i <= 10; ++i)
 {
-	lua_pushstring(L, szResource);
+	lua_pushstring(L, value);
 	lua_rawseti(L, -2, i);
 }
 // key
 for (int i = 1; i <= 10; ++i)
 {
 	lua_pushstring(L, szKey);
-	lua_pushstring(L, szResource);
-	lua_rawseti(L, -3);
+	lua_pushstring(L, value);
+	lua_rawset(L, -3);
 }
+//另一种方式添加table元素
+lua_pushstring(L, szResource);
+lua_setfield(L, -2, szKey);
+
+//下面这个还不清楚
+//lua_settable(L, -2)
 
 
 //--------------------------------------------------------------
@@ -123,7 +129,7 @@ lua_setglobal(ls, "mscpp");
 
 
 //--------------------------------------------------------------
-//-- 输出table的值
+//-- 读取table的值
 //--------------------------------------------------------------
 
 /*
