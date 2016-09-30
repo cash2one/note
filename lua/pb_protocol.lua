@@ -64,6 +64,8 @@ print(test:ByteSize())
 -- 内置类型的repeated使用append()
 test.ary:append(1)
 test.ary:append(2)
+test.ary:remove() -- 最后一个
+test.ary:remove(1) -- 第1个
 
 -- 复合类型的repeated使用add()
 local foo1 = pb.foos:add()
@@ -73,6 +75,8 @@ local foo2 = pb.foos:add()
 foo2.fid = 2
 foo2.fname = "foo2"
 
+pb.foos:remove() -- 最后一个
+pb.foos:remove(1) -- 第1个
 
 
 --------------------------------------------------------------
